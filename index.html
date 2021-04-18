@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DiscordJS</title>
+  <link rel="shortcut icon" type="image/png" href="images/ico_full.png"/>
+  <link rel="stylesheet" href="stylesheet/prism.css">
+  <link rel="stylesheet" href="stylesheet/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+  <!-- Introduction -->
+  <div class="banner" style="display: block !important; background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://d2skuhm0vrry40.cloudfront.net/2018/articles/2018-08-29-13-52/nintendo-takes-down-11-year-old-pokemon-fangame-kit-1535547168922.jpg/EG11/thumbnail/750x422/format/jpg/quality/60');">
+    <div id="class-languages">
+      <i class="fab fa-html5 mr-1" style="color: #f84820"></i>
+      <i class="fab fa-css3-alt mr-1" style="color: #1970b5"></i>
+      <i class="fab fa-js-square mr-1" style="color: #FFE01B"></i>
+    </div>
+    <div class="container">
+      <div class="main">
+        <img src="images/logo.png" alt="">
+        <div class="class-title">
+          <h1>Phaser - Premier jeu</h1>
+        </div>
+      </div>
+      <p>Durant cette session, on va plus se concentrer sur la création de jeux vidéos dans le language JavaScript. Pour ce faire, on se servira de la librarie <b>Phaser</b>.</p>
+      <a class="btn btn-primary tl-button" href="#challenge" role="button">Commencer !</a>
+    </div>
+  </div>
+
+  <div class="container" id="challenge">
+
+    <div class="accordion" id="accordionExample">
+
+      <!-- Étape 1 -->
+      <div class="card">
+        <div class="card-header" id="heading1">
+          <h2 class="mb-0">
+            <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+              Étape 1 - Défis à compléter avant
+            </button>
+          </h2>
+        </div>
+        <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Avant d'entamer ce défi, assure toi d'avoir déjà fait ceux ci:</p>
+            <ul>
+              <!-- <li><a href="https://techieslab.github.io/DiscordJS-PingPong/">Discord.js - Ping Pong</a></li> -->
+              <li>Ceci est la première fiche, pas d'autre fiche à compléter avant! :-P</li>
+            </ul>
+            Ensuite, assure-toi de te munir d'une grande motivation et soif d'apprendre!
+            <!-- <p>Ensuite, assure-toi que tu sois bien connecté à ton compte <a href="https://repl.it">Repl.It</a>, et que tu aies ton projet de la fois passée.</p> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Étape 2 -->
+      <div class="card">
+        <div class="card-header" id="heading2">
+          <h2 class="mb-0">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+              Étape 2 - Pixelart: Le joueur
+            </button>
+          </h2>
+        </div>
+        <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Dans tout bon jeu vidéo, il y a un joueur. Et comme nous créeons notre jeu vidéo à partir de rien, on va aussi créer notre joueur.</p>
+
+            <p>Pour créer un joueur, on utilise <a href="https://www.pixilart.com">pixilart.com</a>. Une fois sur leur site, appuie sur "START DRAWING" (Anglais pour "COMMENCER À DESSINER").</p>
+
+            <p>Tu peux maintenant choisir la taile de ton personnage. Je te recommande fortement de choisir <b>40x40</b>. Pour commencer ton dessin, fait alors "NEW DRAWING".</p>
+
+            <img src="./images/blank_canvas.png" alt="blank_canvas" width="70%">
+
+            <p>Maintenant, explore les outils disponibles à la gauche de ton écran. Dessine un joli personnage pour notre jeu!</p>
+
+            <p>Quand tu as fini, appuie sur <b>Download</b>, et séléctionne <b>Download PNG</b>. Ceci va télécharger ton personnage en format <b>png</b>.</p>
+
+            <img src="./images/download.png" alt="download" width="50%">
+          </div>
+        </div>
+      </div>
+
+      <!-- Étape 3 -->
+      <div class="card">
+        <div class="card-header" id="heading3">
+          <h2 class="mb-0">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+              Étape 3 - Initialiser le ReplIt
+            </button>
+          </h2>
+        </div>
+        <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Pour coder notre magnifique jeu, on va utiliser <a href="https://www.replit.com">ReplIt</a>. Navigue sur le lien et crée toi un compte si ce n'est pas encore fait. Sinon, connecte toi à ton compte.</p>
+
+            <p>Lorsque tu es connecté à ton (nouveau) compte, crée un nouveau Repl. Celui ci doit être dans le language "HTML, CSS, JS".</p>
+
+            <img src="./images/new_repl.png" alt="new_repl" width="70%">
+
+            <p>Une fois ce Repl créé, on doit importer la librarie <b>Phaser</b>. C'est cette librarie qui va nous permettre de programmer tout notre jeu, du début à la fin!</p>
+
+            <p>Pour l'importer, copie-colle cette ligne de code dans <code>index.html</code>, entre la ligne 9 et la ligne 10 (Donc juste en dessous du <code>&lt;body&gt;</code>)</p>
+
+            <pre><code class="language-html">
+              &lt;script src="//cdn.jsdelivr.net/npm/phaser@3.14.0/dist/phaser.min.js"&gt;&lt;/script&gt;
+            </code></pre>
+
+            <p>Voilà tout ce qu'on va changer dans le <code>index.html</code> pour maintenant. Attaquons nous au <code>script.js</code>!</p>
+
+            <p>Tout en haut du <code>script.js</code>, colle ceci:</p>
+
+            <pre><code class="language-js">
+              let config = {
+                type: Phaser.AUTO,
+                  width: 800,
+                  height: 500,
+                  physics: {
+                      default: 'arcade',
+                  },
+                  scene: {
+                    preload,
+                    create,
+                    update
+                  }
+              };
+            </code></pre>
+
+            <p>Ceci est simplement un objet de configuration pour notre jeu. Pour l'instant, on ne va pas trop y changer. Remarque juste qu'on utilise <b>Phaser</b> à la ligne 2, ensuite on définit la taille de notre écran (Tu peux changer ceci si tu veux), et après on ajoute une "physique".</p>
+
+            <p>Ensuite, on va utiliser cet objet de configuration. En ce faisant, on va créer notre jeu.</p>
+
+            <pre><code class="language-js">
+              const game = new Phaser.Game(config);
+            </code></pre>
+
+            <p>On initialise un nouveau jeu Phaser ici. Lance ton code et regarde si quelque chose change.</p>
+
+            <p>Toi aussi tu as une erreur? C'est normal! Il faut encore rajouter 3 fonctions après. Pour l'instant, ajoute les fonctions vides. On va les remplir après.</p>
+
+            <pre><code class="language-js">
+              function preload(){
+              }
+              
+              function create(){
+              }
+              
+              function update(){
+              }
+            </code></pre>
+
+            <p>Si maintenant tu lances ton code, tu devrais voir un écran noir apparaître. Voilà ton jeu!</p>
+
+            <p>Sur ReplIt, tu peux pas voir tout ton écran. Pour voir tout l'écran du jeu, appuie sur le bouton en haut à droite de l'écran. Il ressemble à ceci:</p>
+
+            <img src="./images/new_tab.png" alt="new_tab" width="30%">
+          </div>
+        </div>
+      </div>
+
+      <!-- Étape 4 -->
+      <div class="card">
+        <div class="card-header" id="heading4">
+          <h2 class="mb-0">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+              Étape 4 - Preload
+            </button>
+          </h2>
+        </div>
+        <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Preload en anglais veut dire "avant-charge". En fait, tout ce qu'on écrit dans cette fonction va s'executer avant que le jeu se charge. Par example, on devrait charger les images de nos personnages avant de charger le reste.</p>
+
+            <p>Aujourd'hui, on va juste charger notre personnage. D'abord, importe l'image que tu as créé plus tôt dans ton Repl. Regarde bien le nom, tu en aura besoin.</p>
+
+            <p>Ensuite, rajoute cette ligne de code dans la fonction <code>preload</code>. Remplace les <code>XXXXXXXXXXX</code> par le nom que tu veux donner à ton personnage, et <code>YYYYYYYYY</code> par le nom de ton image.</p>
+
+            <pre><code class="language-js">
+              this.load.image("XXXXXXXXXXX", "YYYYYYYYY.png");
+            </code></pre>
+
+            <p>Tu as maintenant chargé ton personnage. Si tu voudra rajouter d'autres personnages/objects/obstacles dans ton jeu plus tard, ce sera ici qu'il faudra le faire.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Étape 5 -->
+      <div class="card">
+        <div class="card-header" id="heading5">
+          <h2 class="mb-0">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+              Étape 5 - Create
+            </button>
+          </h2>
+        </div>
+        <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Create veut dire "Créer" en anglais. Ceci est la fonction dans laquelle on crée tout ce dont on aura besoin plus tard. Ceci veut dire, par example, de créer notre joueur, mais pas seulement.</p>
+
+            <p>Pour créer notre personnage, il nous faut se souvenir de comment on l'a appellé. Ensuite, on peut mettre la ligne de code suivante:</p>
+
+            <pre><code class="language-js">
+              this.player = this.physics.add.sprite(400, 360, "XXXXXXXXXXX");
+            </code></pre>
+
+            <p>PS: N'oublie pas qu'on travaille maintenant dans la fonction <code>create</code>. Aussi, essaie de changer les deux nombres (<code>400</code> et <code>360</code>) pour voir ce qu'ils font.</p>
+
+            <p>Dans cette fonction <code>create</code> on ne crée pas seulement le personnage. On va aussi créer les touches pour pouvoir bouger le personnage.</p>
+
+            <p>Une des touches dont on aura besoin est la touche D. En effet, la touche D fera bouger notre joueur à droite. Les autres touches dépendent de ton clavier, donc regarde bien avant de tout coder.</p>
+
+            <p>Pour ajouter une touche, fait comme ceci. Ici, je crée la touche D, mais il faudra faire ce code 4 fois, une fois par touche que tu veux utiliser.</p>
+
+            <pre><code class="language-js">
+              this.key_D = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
+            </code></pre>
+
+            <p>Voilà, on a maintenant créé notre personnage et 4 touches. On est donc prêts à passer à la partie principale du jeu!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Étape 6 -->
+      <div class="card">
+        <div class="card-header" id="heading6">
+          <h2 class="mb-0">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+              Étape 6 - Update
+            </button>
+          </h2>
+        </div>
+        <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Update veut dire "Mettre à jour" en anglais. En effet, à l'opposition de <code>preload</code> et <code>create</code>, la fonction <code>update</code> va s'executer plusieurs fois et donc nous permettre bouger notre personnage.</p>
+
+            <p>Pour changer la vitesse du personnage, on fait comme suit. Essaie de mettre cette ligne dans ton code pour vérifier que tout marche bien. Souviens-toi qu'on travaille maintenant dans <code>update</code>.</p>
+
+            <pre><code class="language-js">
+              this.player.setVelocityX(100);
+            </code></pre>
+
+            <p>Le joueur devrait doucement partir à droite. Essaie les deux challenges suivants:</p>
+
+            <ul>
+              <li>Fait avancer le joueur à droite plus rapidement</li>
+              <li>Fait avancer le joueur à gauche</li>
+            </ul>
+
+            <p>Ce serait quand même chouette de pouvoir contrôler notre personnage. On va donc dire que lorsqu'on appuie sur la touche D, le personnage va à droite. Si elle n'appuie pas dessus, le joueur n'avance pas.</p>
+
+            <p>Il nous faut donc savoir comment vérifier si la touche D est pressée ou non. Heureusement pour nous, on a une façon simple de ce faire!</p>
+
+            <pre><code class="language-js">
+              this.key_W.isDown
+            </code></pre>
+
+            <p>On peut alors tout combiner. Ceci ressemblerait donc à ceci:</p>
+
+            <pre><code class="language-js">
+              if(/* Touche D appuyée */) {
+                // Mettre vitesse X à 100
+              } else {
+                // Mettre vitesse X à 0
+              }
+            </code></pre>
+
+            <p>Maintenant, lorsque tu appuies sur la touche D, ton personnage devrait avancer. Si tu n'appuies pas, il ne devrait rien faire.</p>
+
+            <p><b>Challenge:</b> Étends ce code pour pouvoir bouger à gauche aussi!</p>
+
+            <p>
+              <a class="btn btn-warning" data-toggle="collapse" href="#rep6a" role="button" aria-expanded="false" aria-controls="rep5a">Indice</a>
+            </p>
+            <div class="collapse mb-3" id="rep6a">
+              <div class="card card-body">
+                <p>Pour aller à gauche, c'est soit la touche A soit la touche Q. Regarde sur ton clavier avant d'écrire le code. Il va nous falloir faire quelque chose du style</p>
+                <pre><code class="language-js">
+                  if(/* Touche D appuyée */) {
+                    // Mettre vitesse X à 100
+                  } else if(/* Touche A/Q appuyée */) {
+                    // Mettre vitesse X à -100
+                  } else {
+                    // Mettre vitesse X à 0
+                  }
+                </code></pre>
+              </div>
+            </div>
+
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#rep6b" role="button" aria-expanded="false" aria-controls="rep5a">Réponse</a>
+            </p>
+            <div class="collapse mb-3" id="rep6b">
+              <div class="card card-body">
+                <p>Pour aller à gauche, c'est soit la touche A soit la touche Q. Regarde sur ton clavier avant d'écrire le code. Il va nous falloir faire quelque chose du style</p>
+                <pre><code class="language-js">
+                  if(this.key_D.isDown) {
+                    this.player.setVelocityX(100);
+                  } else if(this.key_A.isDown) {
+                    this.player.setVelocityX(-100);
+                  } else {
+                    this.player.setVelocityX(0);
+                  }
+                </code></pre>
+              </div>
+            </div>
+
+            <p>Excellent! Il ne reste plus qu'à ajouter les fonctionalités pour pouvoir monter et descendre. Sur mon clavier ce sont les touches W et S, mais ce sera peut être different sur le tien.</p>
+
+            <p>Tu peux essayer d'ajouter quelques fonctionalités en plus si tu as le temps!</p>
+
+            <ul>
+              <li>Fait en sorte que ton personnage regarde à droite et à gauche dépendant de dans quelle direction il va. Utilise <code>this.player.flipX = true;</code> pour le retourner et <code>this.player.flipX = false;</code> pour le remettre droit.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div> 
+  </div>
+
+
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="https://techieslab.be/"><i class="fas fa-globe"></i></i></a>
+    <a href="https://www.facebook.com/TechiesLabBrussels"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com/TechiesLab"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="footer-copyright">
+    <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/3298561-faites-votre-mise-en-page-avec-flexbox#/id/r-3298711" rel="noopener noreferrer" target="_blank" class="alert-link copyright">
+      <i class="far fa-copyright"></i>
+      2020 Techies Lab ASBL. All rights reserved.
+    </a>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="javascript/prism.js"></script>
+</body>
+</html>
