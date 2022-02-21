@@ -167,17 +167,25 @@
         </div>
         <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Preload en anglais veut dire "avant-charge". En fait, tout ce qu'on écrit dans cette fonction va s'executer avant que le jeu se charge. Par example, on devrait charger les images de nos personnages avant de charger le reste.</p>
+            <p><em>Preload</em> en anglais veut dire "avant-charge". En fait, tout ce qu'on écrit dans cette fonction va s'executer avant que le jeu se charge. Par example, on devrait charger les images de nos personnages avant de charger le reste.</p>
 
-            <p>Aujourd'hui, on va juste charger notre personnage. D'abord, importe l'image que tu as créé plus tôt dans ton Repl. Regarde bien le nom, tu en aura besoin.</p>
+            <p>Aujourd'hui, on va juste charger notre personnage. D'abord, importe l'image que tu as créé plus tôt dans ton Repl. Regarde bien le nom, tu en auras besoin.</p>
 
-            <p>Ensuite, rajoute cette ligne de code dans la fonction <code>preload</code>. Remplace les <code>XXXXXXXXXXX</code> par le nom que tu veux donner à ton personnage, et <code>YYYYYYYYY</code> par le nom de ton image.</p>
+            <p>Ensuite, ajoute cette ligne de code dans la fonction <code>preload</code>. Remplace les <code>XXXXXXXXXXX</code> par le nom que tu veux donner à ton personnage, et <code>YYYYYYYYY</code> par le nom de ton image.</p>
 
             <pre><code class="language-js">
               this.load.image("XXXXXXXXXXX", "YYYYYYYYY.png");
             </code></pre>
 
-            <p>Tu as maintenant chargé ton personnage. Si tu voudra rajouter d'autres personnages/objects/obstacles dans ton jeu plus tard, ce sera ici qu'il faudra le faire.</p>
+            <p>Tu as maintenant chargé ton personnage.</p>
+
+            <div class="alert alert-warning" role="alert">
+              <p>
+                <i class="fas fa-lightbulb"></i>
+                Plus tard, lorsque tu voudras ajouter d'autres personnages/objects/obstacles dans ton jeu, ce sera ici qu'il faudra le faire.
+              </p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -193,27 +201,32 @@
         </div>
         <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Create veut dire "Créer" en anglais. Ceci est la fonction dans laquelle on crée tout ce dont on aura besoin plus tard. Ceci veut dire, par example, de créer notre joueur, mais pas seulement.</p>
+            <p><em>Create</em> veut dire "Créer" en anglais. C'est la fonction dans laquelle on crée tout ce dont on aura besoin plus tard, un peu comme la fonction <code>setup</code> dans p5js. Ceci implique notamment de créer notre joueur, mais pas seulement.</p>
 
-            <p>Pour créer notre personnage, il nous faut se souvenir de comment on l'a appellé. Ensuite, on peut mettre la ligne de code suivante:</p>
+            <p>Pour créer notre personnage, il faut se souvenir de comment on l'a appellé. Ensuite, on peut mettre la ligne de code suivante:</p>
 
             <pre><code class="language-js">
               this.player = this.physics.add.sprite(400, 360, "XXXXXXXXXXX");
             </code></pre>
 
-            <p>PS: N'oublie pas qu'on travaille maintenant dans la fonction <code>create</code>. Aussi, essaie de changer les deux nombres (<code>400</code> et <code>360</code>) pour voir ce qu'ils font.</p>
+            <div class="alert alert-warning" role="alert">
+              <p>
+                <i class="fas fa-exclamation-circle"></i>
+                PS: n'oublie pas qu'on travaille maintenant dans la fonction <code>create</code>. Aussi, essaie de changer les deux nombres (<code>400</code> et <code>360</code>) pour voir ce qu'ils font.
+              </p>
+            </div>
 
-            <p>Dans cette fonction <code>create</code> on ne crée pas seulement le personnage. On va aussi créer les touches pour pouvoir bouger le personnage.</p>
+            <p>Dans cette fonction <code>create</code> on ne crée pas seulement le personnage. On va aussi déterminer les touches du clavier pour pouvoir bouger le personnage.</p>
 
             <p>Une des touches dont on aura besoin est la touche D. En effet, la touche D fera bouger notre joueur à droite. Les autres touches dépendent de ton clavier, donc regarde bien avant de tout coder.</p>
 
-            <p>Pour ajouter une touche, fait comme ceci. Ici, je crée la touche D, mais il faudra faire ce code 4 fois, une fois par touche que tu veux utiliser.</p>
+            <p>Pour ajouter une touche, fais comme ceci. Ici, je crée la touche D, mais il faudra répliquer ce code 4 fois - une fois par touche que tu veux utiliser.</p>
 
             <pre><code class="language-js">
               this.key_D = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
             </code></pre>
 
-            <p>Voilà, on a maintenant créé notre personnage et 4 touches. On est donc prêts à passer à la partie principale du jeu!</p>
+            <p>Voilà, on a maintenant créé notre personnage et 4 touches. On est donc prêt à passer à la partie principale du jeu!</p>
           </div>
         </div>
       </div>
@@ -229,30 +242,37 @@
         </div>
         <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Update veut dire "Mettre à jour" en anglais. En effet, à l'opposition de <code>preload</code> et <code>create</code>, la fonction <code>update</code> va s'executer plusieurs fois et donc nous permettre bouger notre personnage.</p>
+            <p><em>Update</em> veut dire "Mettre à jour" en anglais. En effet, contrairement aux fonctions <code>preload</code> et <code>create</code>, la fonction <code>update</code> va s'executer plusieurs fois par minute et donc nous permettre de créer l'illusion que notre personnage bouge. C'est un peu comme la fonction <code>draw</code> dans p5js.</p>
 
-            <p>Pour changer la vitesse du personnage, on fait comme suit. Essaie de mettre cette ligne dans ton code pour vérifier que tout marche bien. Souviens-toi qu'on travaille maintenant dans <code>update</code>.</p>
+            <p>Pour changer la vitesse du personnage, on fait comme suit: </p>
 
             <pre><code class="language-js">
               this.player.setVelocityX(100);
             </code></pre>
 
+            <div class="alert alert-warning" role="alert">
+              <p>
+                <i class="fas fa-exclamation-circle"></i>
+                Souviens-toi qu'on travaille maintenant dans <code>update</code>.
+              </p>
+            </div>
+
             <p>Le joueur devrait doucement partir à droite. Essaie les deux challenges suivants:</p>
 
             <ul>
-              <li>Fait avancer le joueur à droite plus rapidement</li>
-              <li>Fait avancer le joueur à gauche</li>
+              <li>Fais avancer le joueur à droite plus rapidement</li>
+              <li>Fais avancer le joueur à gauche</li>
             </ul>
 
-            <p>Ce serait quand même chouette de pouvoir contrôler notre personnage. On va donc dire que lorsqu'on appuie sur la touche D, le personnage va à droite. Si elle n'appuie pas dessus, le joueur n'avance pas.</p>
+            <p>Ce serait quand même chouette de pouvoir contrôler notre personnage. On va dire que lorsqu'on appuie sur la touche D, le personnage va à droite. Si la touche n'est pas appuyée, le joueur n'avance pas.</p>
 
-            <p>Il nous faut donc savoir comment vérifier si la touche D est pressée ou non. Heureusement pour nous, on a une façon simple de ce faire!</p>
+            <p>Il faut donc savoir comment vérifier si la touche D est pressée ou non. Heureusement pour nous, on a une façon simple de ce faire!</p>
 
             <pre><code class="language-js">
               this.key_W.isDown
             </code></pre>
 
-            <p>On peut alors tout combiner. Ceci ressemblerait donc à ceci:</p>
+            <p>On peut alors tout combiner comme ceci:</p>
 
             <pre><code class="language-js">
               if(/* Touche D appuyée */) {
@@ -264,14 +284,14 @@
 
             <p>Maintenant, lorsque tu appuies sur la touche D, ton personnage devrait avancer. Si tu n'appuies pas, il ne devrait rien faire.</p>
 
-            <p><b>Challenge:</b> Étends ce code pour pouvoir bouger à gauche aussi!</p>
+            <p><b>Challenge:</b> Écris le code pour pouvoir bouger à gauche aussi!</p>
 
             <p>
-              <a class="btn btn-warning" data-toggle="collapse" href="#rep6a" role="button" aria-expanded="false" aria-controls="rep5a">Indice</a>
+              <a class="btn btn-primary" data-toggle="collapse" href="#rep6a" role="button" aria-expanded="false" aria-controls="rep5a">Indice</a>
             </p>
             <div class="collapse mb-3" id="rep6a">
               <div class="card card-body">
-                <p>Pour aller à gauche, c'est soit la touche A soit la touche Q. Regarde sur ton clavier avant d'écrire le code. Il va nous falloir faire quelque chose du style</p>
+                <p>Pour aller à gauche, c'est soit la touche A, soit la touche Q. Regarde sur ton clavier avant d'écrire le code. Il va falloir faire quelque chose du style: </p>
                 <pre><code class="language-js">
                   if(/* Touche D appuyée */) {
                     // Mettre vitesse X à 100
@@ -289,7 +309,7 @@
             </p>
             <div class="collapse mb-3" id="rep6b">
               <div class="card card-body">
-                <p>Pour aller à gauche, c'est soit la touche A soit la touche Q. Regarde sur ton clavier avant d'écrire le code. Il va nous falloir faire quelque chose du style</p>
+                <p>Pour aller à gauche, j'ai choisi la touche A: </p>
                 <pre><code class="language-js">
                   if(this.key_D.isDown) {
                     this.player.setVelocityX(100);
@@ -302,12 +322,12 @@
               </div>
             </div>
 
-            <p>Excellent! Il ne reste plus qu'à ajouter les fonctionalités pour pouvoir monter et descendre. Sur mon clavier ce sont les touches W et S, mais ce sera peut être different sur le tien.</p>
+            <p>Excellent! Il ne reste plus qu'à ajouter les fonctionalités pour pouvoir monter et descendre. Sur mon clavier, ce sont les touches W et S, mais ce sera peut être different sur le tien.</p>
 
-            <p>Tu peux essayer d'ajouter quelques fonctionalités en plus si tu as le temps!</p>
+            <p>Tu peux essayer d'ajouter quelques fonctionalités en plus si tu as le temps:</p>
 
             <ul>
-              <li>Fait en sorte que ton personnage regarde à droite et à gauche dépendant de dans quelle direction il va. Utilise <code>this.player.flipX = true;</code> pour le retourner et <code>this.player.flipX = false;</code> pour le remettre droit.</li>
+              <li>Fais en sorte que ton personnage regarde à droite ou à gauche dépendamment de la direction dans laquelle il va. Utilise <code>this.player.flipX = true;</code> pour le retourner et <code>this.player.flipX = false;</code> pour le remettre dans sa position initiale.</li>
             </ul>
           </div>
         </div>
@@ -327,7 +347,7 @@
   </div>
   <div class="footer-copyright">
     <a href="https://techieslab.be" rel="noopener noreferrer" target="_blank" class="alert-link copyright">
-      <i class="far fa-copyright"></i> 2021 Techies Lab ASBL. All rights reserved.
+      <i class="far fa-copyright"></i> 2022 Techies Lab ASBL. All rights reserved.
     </a>
   </div>
 </div>
