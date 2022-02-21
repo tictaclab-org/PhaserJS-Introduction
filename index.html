@@ -40,7 +40,7 @@
         </div>
         <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Avant d'entamer ce défi, assure toi d'avoir déjà fait ceux ci:</p>
+            <p>Avant d'entamer ce défi, assure-toi d'avoir déjà fait ceux-ci:</p>
             <ul>
               <!-- <li><a href="https://techieslab.github.io/DiscordJS-PingPong/">Discord.js - Ping Pong</a></li> -->
               <li>Ceci est la première fiche, pas d'autre fiche à compléter avant! :-P</li>
@@ -62,11 +62,11 @@
         </div>
         <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Dans tout bon jeu vidéo, il y a un joueur. Et comme nous créeons notre jeu vidéo à partir de rien, on va aussi créer notre joueur.</p>
+            <p>Dans tout bon jeu vidéo, il y a un joueur ou une joueuse. Et comme nous créons notre jeu vidéo à partir de rien, on va créer nous-même notre joueur.</p>
 
-            <p>Pour créer un joueur, on utilise <a href="https://www.pixilart.com">pixilart.com</a>. Une fois sur leur site, appuie sur "START DRAWING" (Anglais pour "COMMENCER À DESSINER").</p>
+            <p>Pour créer un joueur, on utilise <a href="https://www.pixilart.com">pixilart.com</a>. Une fois sur leur site, appuie sur "START DRAWING" (anglais pour "COMMENCER À DESSINER").</p>
 
-            <p>Tu peux maintenant choisir la taile de ton personnage. Je te recommande fortement de choisir <b>40x40</b>. Pour commencer ton dessin, fait alors "NEW DRAWING".</p>
+            <p>Tu peux maintenant choisir la taille de ton personnage. Je te recommande fortement de choisir <b>40x40</b>. Pour commencer ton dessin, fait alors "NEW DRAWING".</p>
 
             <img src="./images/blank_canvas.png" alt="blank_canvas" width="70%">
 
@@ -90,9 +90,9 @@
         </div>
         <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
           <div class="card-body">
-            <p>Pour coder notre magnifique jeu, on va utiliser <a href="https://www.replit.com">ReplIt</a>. Navigue sur le lien et crée toi un compte si ce n'est pas encore fait. Sinon, connecte toi à ton compte.</p>
+            <p>Pour coder notre magnifique jeu, on va utiliser <a href="https://www.replit.com">ReplIt</a>. Navigue sur le lien et crée-toi un compte si ce n'est pas encore fait. Sinon, connecte-toi à ton compte.</p>
 
-            <p>Lorsque tu es connecté à ton (nouveau) compte, crée un nouveau Repl. Celui ci doit être dans le language "HTML, CSS, JS".</p>
+            <p>Lorsque tu es connecté à ton (nouveau) compte, crée un nouveau Repl. Celui ci doit être dans le langage "HTML, CSS, JS".</p>
 
             <img src="./images/new_repl.png" alt="new_repl" width="70%">
 
@@ -104,9 +104,9 @@
               &lt;script src="//cdn.jsdelivr.net/npm/phaser@3.14.0/dist/phaser.min.js"&gt;&lt;/script&gt;
             </code></pre>
 
-            <p>Voilà tout ce qu'on va changer dans le <code>index.html</code> pour maintenant. Attaquons nous au <code>script.js</code>!</p>
+            <p>Voilà tout ce qu'on va changer dans le fichier <code>index.html</code> pour l'instant. Attaquons-nous maintenant au fichier <code>script.js</code>!</p>
 
-            <p>Tout en haut du <code>script.js</code>, colle ceci:</p>
+            <p>Tout en haut de <code>script.js</code>, colle ceci:</p>
 
             <pre><code class="language-js">
               let config = {
@@ -124,17 +124,17 @@
               };
             </code></pre>
 
-            <p>Ceci est simplement un objet de configuration pour notre jeu. Pour l'instant, on ne va pas trop y changer. Remarque juste qu'on utilise <b>Phaser</b> à la ligne 2, ensuite on définit la taille de notre écran (Tu peux changer ceci si tu veux), et après on ajoute une "physique".</p>
+            <p>Ces lignes sevent à configurer notre jeu. Pour l'instant, on ne va pas trop y toucher. Remarque cependant qu'on utilise la librairie <b>Phaser</b> à la ligne 2. Ensuite, on définit la taille de notre écran en pixels (tu peux changer les valeurs si tu le souhaites), et après on ajoute les lois "physiques" qui vont s'appliquer à notre jeu. Et finalement, on voit qu'une "scène" est composée de 3 phases: <code class="language-js">preload</code>, <code class="language-js">create</code> et <code class="language-js">update</code>. Ces phases correspondent chacune à une fonction.</p>
 
-            <p>Ensuite, on va utiliser cet objet de configuration. En ce faisant, on va créer notre jeu.</p>
+            <p>On va maintenant utiliser cet "objet" de configuration sauvegardé dans la variable <code class="language-js">config</code> pour créer notre jeu:</p>
 
             <pre><code class="language-js">
               const game = new Phaser.Game(config);
             </code></pre>
 
-            <p>On initialise un nouveau jeu Phaser ici. Lance ton code et regarde si quelque chose change.</p>
+            <p>Lance ton code et regarde si quelque chose change.</p>
 
-            <p>Toi aussi tu as une erreur? C'est normal! Il faut encore rajouter 3 fonctions après. Pour l'instant, ajoute les fonctions vides. On va les remplir après.</p>
+            <p>Toi aussi tu as une erreur? C'est normal! Il faut encore ajouter les 3 fonctions (phases) mentionnées dans notre configuration. Pour l'instant, ajoute les fonctions sans les coder. On va le faire après.</p>
 
             <pre><code class="language-js">
               function preload(){
